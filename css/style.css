@@ -1,0 +1,321 @@
+*{
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+body {
+	overflow-x: hidden;
+ 	font-family: "Quicksand", sans-serif;
+  	font-optical-sizing: auto;
+  	font-style: normal;
+}
+
+
+
+/*		01 ENCABEZADO -----------------------------------*/
+
+header {
+	width: 100%;
+	height: auto;
+	background-color: purple;
+	display: flex;
+}
+
+/*		caja izquierda ----*/
+
+#logotipo {
+	width: 50%;
+	height: auto;
+/*	background-color: hotpink;*/
+	padding: 0% 0% 0% 5%;
+	display: flex;
+	align-items: center;
+}
+
+#logotipo img{
+	width: 6rem;
+}
+
+/*		caja derecha -------*/
+
+nav {
+	width: 50%;
+	display: flex;
+/*	background-color: yellowgreen;*/
+}
+
+#menu {
+	width: auto;
+	display: flex;
+	justify-content: space-evenly;
+	flex-direction: row;
+	list-style: none;
+	padding: 3vh 0vh 3vh 10vh;
+}
+
+.linksmenu {
+	width: auto;
+	margin: 10% 10%;
+	font-weight: bold;
+	font-size: 1.2rem;
+}
+
+.linksmenu a {
+	width: auto;
+	margin: 0px 15px;
+	text-decoration: none;
+	color: white;
+}
+
+.linksmenu a:hover{
+	text-decoration: underline;
+	text-decoration-thickness: 4px;
+}
+
+
+
+
+/*		02 HERO AMARILLO (video) -----------------------*/
+
+hero {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: cyan;
+    display:flex;
+    color:white;
+    /background-image: url('../Media/hero.gif'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+/*		03 ABOUT  --------------------------------------*/
+
+#about {
+	width: 100vw;
+	height: auto;
+	background-color: #40d283;
+	display: flex;
+	padding: 10%;
+	flex-direction: row;
+}
+
+h2 {
+	font-size: 3rem;
+	font-weight: 500;
+	padding: 3%;
+}
+
+p {
+	font-size: 1.2rem;
+	padding: 3%;
+}
+
+
+
+/*		04 FOOTER --------------------------------------*/
+
+footer {
+	background-color: purple;
+	padding: 10%;
+	color: white;
+}
+
+.footer-caixa {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.footer-section {
+	width: 25%;
+	padding: 3%;
+}
+
+
+
+
+/*		05 ACTIVIDADES ----------------------------------*/
+
+#actividades {
+    width: 100vw;
+    height: auto;
+    background-color: #40d283;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 5% 10% 5% 10%;
+}
+
+.act {
+    width: 50%;
+    height: auto;
+    padding: 5%;
+/*    padding-bottom: 10%;*/
+}
+
+.act img {
+    width: 100%;
+    padding-bottom: 5%;
+}
+
+
+
+
+/*		06 FORMULARI ------------------------------------*/
+
+.formulari {
+	width: 100%;
+	height: auto;
+	background-color: #40d283;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	flex-direction: row;
+	padding: 5% 10% 5% 10%;
+}
+
+.formulari-section {
+	width: 50%;
+	font-size: 1.5rem;
+}
+
+.mapa-section {
+	width: 50%;
+	padding-left: 10%;
+}
+
+ul {
+	list-style: none;
+}
+
+li {
+	padding: 2%
+}
+
+button {
+	font-size: 1.2rem;
+}
+
+input {
+	background-color: #85e6b2;
+	width: 90%;
+}
+
+textarea {
+	background-color: #85e6b2;
+}
+
+
+
+
+/*		07 MEDIAQUERIE ------------------------------------*/
+
+@media screen and (max-width: 880px) {
+	
+	header {
+		flex-direction: column;
+		padding-top: 10%;
+	}
+
+	nav {
+		.linksmenu a {
+			font-size: 2rem;
+			line-height: 4rem;
+		}
+	}
+
+	#logotipo img {
+		height: auto;
+	}
+
+	#logotipo {
+		display: flex;
+		justify-content: flex-start;
+		padding-left: 120px;
+	}
+
+	#menu {
+		display: flex;
+		flex-direction: column;
+	}
+
+	#about {
+		flex-direction: column;
+		padding: 5%;
+	}
+
+	.footer-caixa {
+		flex-direction: column;
+	}
+
+	.footer-section {
+		width: 100%;
+		padding: 5% 0% 0% 0;
+	}
+
+/*	p {
+    font-size: 2rem;
+    }
+
+  	a {
+    font-size: 2rem;
+	}
+
+	a:hover {
+    font-size: 2rem;
+    text-decoration-line: underline;
+	}*/
+
+
+/*	MEDIAQUERIES MBL activitats.HTML*/
+/*	#actividades {
+	flex-direction: column;
+	}
+
+	.act {
+	width: 100%;
+	}*/
+
+
+
+/*		MEDIAQUERIES FORMULARI -----*/
+
+
+
+/*		MEDIAQUERIES FORMULARI -----*/
+	.formulari {
+		flex-direction: column;
+	}
+
+	.formulari-section {
+		width: 100%;
+	}
+
+	.mapa {
+		width: 100%;
+		padding-left: 0px;
+	}
+
+
+}
+
+
